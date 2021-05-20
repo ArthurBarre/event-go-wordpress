@@ -30,12 +30,18 @@ define( 'DB_PASSWORD', 'password' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
+// define( 'DB_HOST', '127.0.0.1:3307' ); for dev
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+// for dev
+// define( 'WP_HOME', 'http://127.0.0.1/event-go-wordpress' );
+
+// define( 'WP_SITEURL', 'http://127.0.0.1/event-go-wordpress' );
 
 /**#@+
  * Authentication Unique Keys and Salts.
