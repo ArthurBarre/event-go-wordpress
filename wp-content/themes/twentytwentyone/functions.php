@@ -627,3 +627,74 @@ function twentytwentyone_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: events.
+	 */
+
+	$labels = [
+		"name" => __( "events", "twentytwentyone" ),
+		"singular_name" => __( "event", "twentytwentyone" ),
+		"menu_name" => __( "Mon events", "twentytwentyone" ),
+		"all_items" => __( "Tous les events", "twentytwentyone" ),
+		"add_new" => __( "Ajouter un nouveau", "twentytwentyone" ),
+		"add_new_item" => __( "Ajouter un nouveau event", "twentytwentyone" ),
+		"edit_item" => __( "Modifier event", "twentytwentyone" ),
+		"new_item" => __( "Nouveau event", "twentytwentyone" ),
+		"view_item" => __( "Voir event", "twentytwentyone" ),
+		"view_items" => __( "Voir events", "twentytwentyone" ),
+		"search_items" => __( "Recherche de events", "twentytwentyone" ),
+		"not_found" => __( "Aucun events trouvé", "twentytwentyone" ),
+		"not_found_in_trash" => __( "Aucun events trouvé dans la corbeille", "twentytwentyone" ),
+		"parent" => __( "Parent event :", "twentytwentyone" ),
+		"featured_image" => __( "Image mise en avant pour ce event", "twentytwentyone" ),
+		"set_featured_image" => __( "Définir l’image mise en avant pour ce event", "twentytwentyone" ),
+		"remove_featured_image" => __( "Retirer l’image mise en avant pour ce event", "twentytwentyone" ),
+		"use_featured_image" => __( "Utiliser comme image mise en avant pour ce event", "twentytwentyone" ),
+		"archives" => __( "Archives de event", "twentytwentyone" ),
+		"insert_into_item" => __( "Insérer dans event", "twentytwentyone" ),
+		"uploaded_to_this_item" => __( "Téléverser sur ce event", "twentytwentyone" ),
+		"filter_items_list" => __( "Filtrer la liste de events", "twentytwentyone" ),
+		"items_list_navigation" => __( "Navigation de liste de events", "twentytwentyone" ),
+		"items_list" => __( "Liste de events", "twentytwentyone" ),
+		"attributes" => __( "Attributs de events", "twentytwentyone" ),
+		"name_admin_bar" => __( "event", "twentytwentyone" ),
+		"item_published" => __( "event publié", "twentytwentyone" ),
+		"item_published_privately" => __( "event publié en privé.", "twentytwentyone" ),
+		"item_reverted_to_draft" => __( "event repassés en brouillon.", "twentytwentyone" ),
+		"item_scheduled" => __( "event planifié", "twentytwentyone" ),
+		"item_updated" => __( "event mis à jour.", "twentytwentyone" ),
+		"parent_item_colon" => __( "Parent event :", "twentytwentyone" ),
+	];
+
+	$args = [
+		"label" => __( "events", "twentytwentyone" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "event", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "thumbnail", "custom-fields" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "event", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+
