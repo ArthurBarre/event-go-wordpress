@@ -22,7 +22,9 @@ ob_start();
             <div>
                 <div> <?php the_title(); ?> </div>
             </div>
+            <?php
         }
     }
+?>
 
 </div>
