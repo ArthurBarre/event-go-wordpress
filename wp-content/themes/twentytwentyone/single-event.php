@@ -18,6 +18,7 @@ ob_start();
     if($last_events->have_posts()){
         while ($last_events->have_posts()) {
             $last_events->the_post();
+            var_dump($last_events->the_post())
             ?>
             <div>
                 <div> <?php the_title(); ?> </div>
