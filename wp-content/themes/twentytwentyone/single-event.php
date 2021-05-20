@@ -9,7 +9,7 @@ $event_args = array(
 
 $last_events = new WP_Query( $event_args );
 
-ob_start();
+ob_start(); 
 
 ?>
 
