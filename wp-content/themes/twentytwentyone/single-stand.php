@@ -5,19 +5,24 @@
       if (have_posts()) {
           while (have_posts()) {
               the_post(); ?>
-            <div class='card'>
-              <div class='card-img'><img src="<?php the_field('imageUrl'); ?>" alt=""></div>
-              <h3 class='card-heading'><?php the_field('name'); ?></h3>
-              <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nam
-                dignissimos veniam!
-              </p>
-              <p class='card-category'><b>Zone : <?php the_field('zone'); ?></b></p>
-            </div>
+            <article class='single-element'>
+              <h1><?= get_field('name') ?></h1>
+              <hr>
+              <section>
+                <div class="flex-row">
+                  <img src="<?= get_field('imageUrl'); ?>" alt='image' width="500px">
+                  <div class="single-element__description">
+                    <div><?= get_field('description') ?></div>
+                    <div class="single-element__about">
+                      <p>Référence de la zone : <?= get_field('zone') ?></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </article>
               <?php
           }
       } ?>
-
   </div>
 
 <?php get_footer(); ?>
