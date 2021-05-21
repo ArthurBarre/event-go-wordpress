@@ -10,7 +10,7 @@
             <hr>
             <section>
               <div class="flex-row">
-                <img src="<?= get_field('imageUrl'); ?>" alt=''>
+               <img src="<?= get_field('imageUrl'); ?>" style='width: 49%;' alt='image'>
                 <div class="single-element__description">
                   <div><?= get_field('description') ?></div>
                   <div class="single-element__about">
