@@ -1,27 +1,10 @@
-<?php
-get_header();
-$stand_args = array(
-    'post_type' => 'stand',
-    'posts_per_page' => 3,
-    'orderby' => 'date',
-    'order' => 'desc',
-);
-
-$last_stands = new WP_Query($stand_args);
-
-
-?>
+<?php get_header(); ?>
 
   <div>
       <?php
-      if ($last_stands->have_posts()) {
-          while ($last_stands->have_posts()) {
-              $last_stands->the_post();
-              //var_dump($last_stands)
-              ?>
-
-
-            <h1><?php the_title(); ?></h1>
+      if (have_posts()) {
+          while (have_posts()) {
+              the_post(); ?>
             <div class='card'>
               <div class='card-img'><img src="<?php the_field('imageUrl'); ?>" alt=""></div>
               <h3 class='card-heading'><?php the_field('name'); ?></h3>
