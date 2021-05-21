@@ -22,7 +22,7 @@ function display_events($user_args)
 
     $event_args = array(
         'post_type' => 'event',
-        'posts_per_page' => 5,
+        'posts_per_page' => 10,
         'orderby' => 'date',
         'order' => 'desc',
     );

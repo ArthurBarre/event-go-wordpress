@@ -22,7 +22,7 @@ function display_stands($user_args)
 
     $stand_args = array(
         'post_type' => 'stand',
-        'posts_per_page' => 5,
+        'posts_per_page' => 10,
         'orderby' => 'date',
         'order' => 'desc',
     );
