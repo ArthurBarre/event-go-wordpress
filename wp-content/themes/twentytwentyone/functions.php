@@ -732,3 +732,15 @@ function change_footer_text(){
     </div>
     <?php
 }
+
+function
+change_footer($text){
+    if(get_option( 'mon_reglage_custom' )){
+        $value = get_option('mon_reglage_custom');
+        return "Merci de faire de " . $value . ' votre organisateur d\'évenement !';
+    } else {
+        return $text;
+    }
+}
+
+add_filter('admin_footer_text','change_footer');
