@@ -665,3 +665,70 @@ function loadCardStylesheet()
 }
 
 add_action('wp_enqueue_scripts', 'loadCardStylesheet');
+
+add_action('admin_menu','create_menu');
+
+function create_menu() {
+    add_menu_page( 
+        'Changer le titre Admin',
+        'Footer Text',
+        'manage_options',
+        'custom_footer_text',
+        'change_footer_text',
+        'dashicons-awards',
+        66
+    );
+}
+add_action( 'admin_init','mon_reglage');
+
+function mon_reglage(){
+
+    register_setting( 'mon_groupe_de_reglage', 'mon_reglage_custom', 'sanitize_text_field' );
+    
+    add_settings_section( 'section_de_reglage', 'Titre De Section De Reglage', 'callback_display_reglage','custom_footer_text' );
+    
+    add_settings_field(
+        'mon_champs_de_reglage_custom',
+        'Mon Champs de reglage custom',
+        'callback_display_setting_field',
+        'custom_footer_text',
+        'section_de_reglage',
+        array(
+            'label'=>'je suis un label'
+        )
+    );
+}
+
+function callback_display_reglage($args){
+    echo 'Je suis dans le callback de la section de reglage : <br />';
+    var_dump($args);
+}
+
+function callback_display_setting_field($args){
+    var_dump($args);
+
+    $setting = get_option( 'mon_reglage_custom' );
+    var_dump( $setting );
+
+    $value = $setting ? : "";
+    ?>
+    <input type="text" name="mon_reglage_custom" id="whatever" value="<?= $value; ?>">
+    <?php
+}
+
+function change_footer_text(){
+    ?>
+    <div class="wrap">
+        <h1> <?php echo esc_html(get_admin_page_title());?> </h1>
+        <form action="options.php" method="post">
+        <?php 
+        settings_fields('mon_groupe_de_reglage');
+
+        do_settings_sections('custom_footer_text');
+
+        submit_button();
+        ?>
+        </form>
+    </div>
+    <?php
+}
