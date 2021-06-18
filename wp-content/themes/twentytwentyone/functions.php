@@ -50,16 +50,16 @@ if (!function_exists('twenty_twenty_one_setup')) {
          * Add post-formats support.
          */
         add_theme_support('post-formats', array(
-                'link',
-                'aside',
-                'gallery',
-                'image',
-                'quote',
-                'status',
-                'video',
-                'audio',
-                'chat',
-            ));
+            'link',
+            'aside',
+            'gallery',
+            'image',
+            'quote',
+            'status',
+            'video',
+            'audio',
+            'chat',
+        ));
 
         /*
              * Enable support for Post Thumbnails on posts and pages.
@@ -70,23 +70,23 @@ if (!function_exists('twenty_twenty_one_setup')) {
         set_post_thumbnail_size(1568, 9999);
 
         register_nav_menus(array(
-                'primary' => esc_html__('Primary menu', 'twentytwentyone'),
-                'footer' => __('Secondary menu', 'twentytwentyone'),
-            ));
+            'primary' => esc_html__('Primary menu', 'twentytwentyone'),
+            'footer' => __('Secondary menu', 'twentytwentyone'),
+        ));
 
         /*
              * Switch default core markup for search form, comment form, and comments
              * to output valid HTML5.
              */
         add_theme_support('html5', array(
-                'comment-form',
-                'comment-list',
-                'gallery',
-                'caption',
-                'style',
-                'script',
-                'navigation-widgets',
-            ));
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'style',
+            'script',
+            'navigation-widgets',
+        ));
 
         /**
          * Add support for core custom logo.
@@ -97,12 +97,12 @@ if (!function_exists('twenty_twenty_one_setup')) {
         $logo_height = 100;
 
         add_theme_support('custom-logo', array(
-                'height' => $logo_height,
-                'width' => $logo_width,
-                'flex-width' => true,
-                'flex-height' => true,
-                'unlink-homepage-logo' => true,
-            ));
+            'height' => $logo_height,
+            'width' => $logo_width,
+            'flex-width' => true,
+            'flex-height' => true,
+            'unlink-homepage-logo' => true,
+        ));
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
@@ -134,54 +134,54 @@ if (!function_exists('twenty_twenty_one_setup')) {
 
         // Add custom editor font sizes.
         add_theme_support('editor-font-sizes', array(
-                array(
-                    'name' => esc_html__('Extra small', 'twentytwentyone'),
-                    'shortName' => esc_html_x('XS', 'Font size', 'twentytwentyone'),
-                    'size' => 16,
-                    'slug' => 'extra-small',
-                ),
-                array(
-                    'name' => esc_html__('Small', 'twentytwentyone'),
-                    'shortName' => esc_html_x('S', 'Font size', 'twentytwentyone'),
-                    'size' => 18,
-                    'slug' => 'small',
-                ),
-                array(
-                    'name' => esc_html__('Normal', 'twentytwentyone'),
-                    'shortName' => esc_html_x('M', 'Font size', 'twentytwentyone'),
-                    'size' => 20,
-                    'slug' => 'normal',
-                ),
-                array(
-                    'name' => esc_html__('Large', 'twentytwentyone'),
-                    'shortName' => esc_html_x('L', 'Font size', 'twentytwentyone'),
-                    'size' => 24,
-                    'slug' => 'large',
-                ),
-                array(
-                    'name' => esc_html__('Extra large', 'twentytwentyone'),
-                    'shortName' => esc_html_x('XL', 'Font size', 'twentytwentyone'),
-                    'size' => 40,
-                    'slug' => 'extra-large',
-                ),
-                array(
-                    'name' => esc_html__('Huge', 'twentytwentyone'),
-                    'shortName' => esc_html_x('XXL', 'Font size', 'twentytwentyone'),
-                    'size' => 96,
-                    'slug' => 'huge',
-                ),
-                array(
-                    'name' => esc_html__('Gigantic', 'twentytwentyone'),
-                    'shortName' => esc_html_x('XXXL', 'Font size', 'twentytwentyone'),
-                    'size' => 144,
-                    'slug' => 'gigantic',
-                ),
-            ));
+            array(
+                'name' => esc_html__('Extra small', 'twentytwentyone'),
+                'shortName' => esc_html_x('XS', 'Font size', 'twentytwentyone'),
+                'size' => 16,
+                'slug' => 'extra-small',
+            ),
+            array(
+                'name' => esc_html__('Small', 'twentytwentyone'),
+                'shortName' => esc_html_x('S', 'Font size', 'twentytwentyone'),
+                'size' => 18,
+                'slug' => 'small',
+            ),
+            array(
+                'name' => esc_html__('Normal', 'twentytwentyone'),
+                'shortName' => esc_html_x('M', 'Font size', 'twentytwentyone'),
+                'size' => 20,
+                'slug' => 'normal',
+            ),
+            array(
+                'name' => esc_html__('Large', 'twentytwentyone'),
+                'shortName' => esc_html_x('L', 'Font size', 'twentytwentyone'),
+                'size' => 24,
+                'slug' => 'large',
+            ),
+            array(
+                'name' => esc_html__('Extra large', 'twentytwentyone'),
+                'shortName' => esc_html_x('XL', 'Font size', 'twentytwentyone'),
+                'size' => 40,
+                'slug' => 'extra-large',
+            ),
+            array(
+                'name' => esc_html__('Huge', 'twentytwentyone'),
+                'shortName' => esc_html_x('XXL', 'Font size', 'twentytwentyone'),
+                'size' => 96,
+                'slug' => 'huge',
+            ),
+            array(
+                'name' => esc_html__('Gigantic', 'twentytwentyone'),
+                'shortName' => esc_html_x('XXXL', 'Font size', 'twentytwentyone'),
+                'size' => 144,
+                'slug' => 'gigantic',
+            ),
+        ));
 
         // Custom background color.
         add_theme_support('custom-background', array(
-                'default-color' => 'd1e4dd',
-            ));
+            'default-color' => 'd1e4dd',
+        ));
 
         // Editor color palette.
         $black = '#000000';
@@ -196,100 +196,100 @@ if (!function_exists('twenty_twenty_one_setup')) {
         $white = '#FFFFFF';
 
         add_theme_support('editor-color-palette', array(
-                array(
-                    'name' => esc_html__('Black', 'twentytwentyone'),
-                    'slug' => 'black',
-                    'color' => $black,
-                ),
-                array(
-                    'name' => esc_html__('Dark gray', 'twentytwentyone'),
-                    'slug' => 'dark-gray',
-                    'color' => $dark_gray,
-                ),
-                array(
-                    'name' => esc_html__('Gray', 'twentytwentyone'),
-                    'slug' => 'gray',
-                    'color' => $gray,
-                ),
-                array(
-                    'name' => esc_html__('Green', 'twentytwentyone'),
-                    'slug' => 'green',
-                    'color' => $green,
-                ),
-                array(
-                    'name' => esc_html__('Blue', 'twentytwentyone'),
-                    'slug' => 'blue',
-                    'color' => $blue,
-                ),
-                array(
-                    'name' => esc_html__('Purple', 'twentytwentyone'),
-                    'slug' => 'purple',
-                    'color' => $purple,
-                ),
-                array(
-                    'name' => esc_html__('Red', 'twentytwentyone'),
-                    'slug' => 'red',
-                    'color' => $red,
-                ),
-                array(
-                    'name' => esc_html__('Orange', 'twentytwentyone'),
-                    'slug' => 'orange',
-                    'color' => $orange,
-                ),
-                array(
-                    'name' => esc_html__('Yellow', 'twentytwentyone'),
-                    'slug' => 'yellow',
-                    'color' => $yellow,
-                ),
-                array(
-                    'name' => esc_html__('White', 'twentytwentyone'),
-                    'slug' => 'white',
-                    'color' => $white,
-                ),
-            ));
+            array(
+                'name' => esc_html__('Black', 'twentytwentyone'),
+                'slug' => 'black',
+                'color' => $black,
+            ),
+            array(
+                'name' => esc_html__('Dark gray', 'twentytwentyone'),
+                'slug' => 'dark-gray',
+                'color' => $dark_gray,
+            ),
+            array(
+                'name' => esc_html__('Gray', 'twentytwentyone'),
+                'slug' => 'gray',
+                'color' => $gray,
+            ),
+            array(
+                'name' => esc_html__('Green', 'twentytwentyone'),
+                'slug' => 'green',
+                'color' => $green,
+            ),
+            array(
+                'name' => esc_html__('Blue', 'twentytwentyone'),
+                'slug' => 'blue',
+                'color' => $blue,
+            ),
+            array(
+                'name' => esc_html__('Purple', 'twentytwentyone'),
+                'slug' => 'purple',
+                'color' => $purple,
+            ),
+            array(
+                'name' => esc_html__('Red', 'twentytwentyone'),
+                'slug' => 'red',
+                'color' => $red,
+            ),
+            array(
+                'name' => esc_html__('Orange', 'twentytwentyone'),
+                'slug' => 'orange',
+                'color' => $orange,
+            ),
+            array(
+                'name' => esc_html__('Yellow', 'twentytwentyone'),
+                'slug' => 'yellow',
+                'color' => $yellow,
+            ),
+            array(
+                'name' => esc_html__('White', 'twentytwentyone'),
+                'slug' => 'white',
+                'color' => $white,
+            ),
+        ));
 
         add_theme_support('editor-gradient-presets', array(
-                array(
-                    'name' => esc_html__('Purple to yellow', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$purple.' 0%, '.$yellow.' 100%)',
-                    'slug' => 'purple-to-yellow',
-                ),
-                array(
-                    'name' => esc_html__('Yellow to purple', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$purple.' 100%)',
-                    'slug' => 'yellow-to-purple',
-                ),
-                array(
-                    'name' => esc_html__('Green to yellow', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$green.' 0%, '.$yellow.' 100%)',
-                    'slug' => 'green-to-yellow',
-                ),
-                array(
-                    'name' => esc_html__('Yellow to green', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$green.' 100%)',
-                    'slug' => 'yellow-to-green',
-                ),
-                array(
-                    'name' => esc_html__('Red to yellow', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$red.' 0%, '.$yellow.' 100%)',
-                    'slug' => 'red-to-yellow',
-                ),
-                array(
-                    'name' => esc_html__('Yellow to red', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$red.' 100%)',
-                    'slug' => 'yellow-to-red',
-                ),
-                array(
-                    'name' => esc_html__('Purple to red', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$purple.' 0%, '.$red.' 100%)',
-                    'slug' => 'purple-to-red',
-                ),
-                array(
-                    'name' => esc_html__('Red to purple', 'twentytwentyone'),
-                    'gradient' => 'linear-gradient(160deg, '.$red.' 0%, '.$purple.' 100%)',
-                    'slug' => 'red-to-purple',
-                ),
-            ));
+            array(
+                'name' => esc_html__('Purple to yellow', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$purple.' 0%, '.$yellow.' 100%)',
+                'slug' => 'purple-to-yellow',
+            ),
+            array(
+                'name' => esc_html__('Yellow to purple', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$purple.' 100%)',
+                'slug' => 'yellow-to-purple',
+            ),
+            array(
+                'name' => esc_html__('Green to yellow', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$green.' 0%, '.$yellow.' 100%)',
+                'slug' => 'green-to-yellow',
+            ),
+            array(
+                'name' => esc_html__('Yellow to green', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$green.' 100%)',
+                'slug' => 'yellow-to-green',
+            ),
+            array(
+                'name' => esc_html__('Red to yellow', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$red.' 0%, '.$yellow.' 100%)',
+                'slug' => 'red-to-yellow',
+            ),
+            array(
+                'name' => esc_html__('Yellow to red', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$yellow.' 0%, '.$red.' 100%)',
+                'slug' => 'yellow-to-red',
+            ),
+            array(
+                'name' => esc_html__('Purple to red', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$purple.' 0%, '.$red.' 100%)',
+                'slug' => 'purple-to-red',
+            ),
+            array(
+                'name' => esc_html__('Red to purple', 'twentytwentyone'),
+                'gradient' => 'linear-gradient(160deg, '.$red.' 0%, '.$purple.' 100%)',
+                'slug' => 'red-to-purple',
+            ),
+        ));
 
         /*
             * Adds starter content to highlight the theme on fresh sites.
@@ -333,14 +333,14 @@ function twenty_twenty_one_widgets_init()
 {
 
     register_sidebar(array(
-            'name' => esc_html__('Footer', 'twentytwentyone'),
-            'id' => 'sidebar-1',
-            'description' => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget' => '</section>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        ));
+        'name' => esc_html__('Footer', 'twentytwentyone'),
+        'id' => 'sidebar-1',
+        'description' => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 }
 
 add_action('widgets_init', 'twenty_twenty_one_widgets_init');
@@ -403,8 +403,8 @@ function twenty_twenty_one_scripts()
     // Register the IE11 polyfill loader.
     wp_register_script('twenty-twenty-one-ie11-polyfills', null, array(), wp_get_theme()->get('Version'), true);
     wp_add_inline_script('twenty-twenty-one-ie11-polyfills', wp_get_script_polyfill($wp_scripts, array(
-                'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
-            )));
+        'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
+    )));
 
     // Main navigation scripts.
     if (has_nav_menu('primary')) {
@@ -666,81 +666,72 @@ function loadCardStylesheet()
 
 add_action('wp_enqueue_scripts', 'loadCardStylesheet');
 
-add_action('admin_menu','create_menu');
+add_action('admin_menu', 'create_menu');
 
-function create_menu() {
-    add_menu_page( 
-        'Changer le titre Admin',
-        'Footer Text',
-        'manage_options',
-        'custom_footer_text',
-        'change_footer_text',
-        'dashicons-awards',
-        66
-    );
-}
-add_action( 'admin_init','mon_reglage');
-
-function mon_reglage(){
-
-    register_setting( 'mon_groupe_de_reglage', 'mon_reglage_custom', 'sanitize_text_field' );
-    
-    add_settings_section( 'section_de_reglage', 'Titre De Section De Reglage', 'callback_display_reglage','custom_footer_text' );
-    
-    add_settings_field(
-        'mon_champs_de_reglage_custom',
-        'Mon Champs de reglage custom',
-        'callback_display_setting_field',
-        'custom_footer_text',
-        'section_de_reglage',
-        array(
-            'label'=>'je suis un label'
-        )
-    );
+function create_menu()
+{
+    add_menu_page('Changer le titre Admin', 'Footer Text', 'manage_options', 'custom_footer_text', 'change_footer_text', 'dashicons-awards', 66);
 }
 
-function callback_display_reglage($args){
+add_action('admin_init', 'mon_reglage');
+
+function mon_reglage()
+{
+
+    register_setting('mon_groupe_de_reglage', 'mon_reglage_custom', 'sanitize_text_field');
+
+    add_settings_section('section_de_reglage', 'Titre De Section De Reglage', 'callback_display_reglage', 'custom_footer_text');
+
+    add_settings_field('mon_champs_de_reglage_custom', 'Mon Champs de reglage custom', 'callback_display_setting_field', 'custom_footer_text', 'section_de_reglage', array(
+        'label' => 'je suis un label',
+    ));
+}
+
+function callback_display_reglage($args)
+{
     echo 'Je suis dans le callback de la section de reglage : <br />';
     var_dump($args);
 }
 
-function callback_display_setting_field($args){
-    var_dump($args);
-
-    $setting = get_option( 'mon_reglage_custom' );
-    var_dump( $setting );
-
-    $value = $setting ? : "";
+function callback_display_setting_field($args)
+{
     ?>
-    <input type="text" name="mon_reglage_custom" id="whatever" value="<?= $value; ?>">
+  <label for='title'>Titre</label><br/>
+  <input type='text' name='title' id='title'><br/><br/>
+
+  <label for='description'>Description</label><br/>
+  <input type='text' name='description' id='description'><br/><br/>
+  <input name='action' type='hidden' value='post_un_truc'>
     <?php
 }
 
-function change_footer_text(){
+function change_footer_text()
+{
     ?>
-    <div class="wrap">
-        <h1> <?php echo esc_html(get_admin_page_title());?> </h1>
-        <form action="options.php" method="post">
-        <?php 
+  <div class="wrap">
+    <h1> <?php echo esc_html(get_admin_page_title()); ?> </h1>
+    <form action='<?php echo esc_url(admin_url('admin-post.php')); ?>' method='post'>
+        <?php
         settings_fields('mon_groupe_de_reglage');
 
         do_settings_sections('custom_footer_text');
-
+        wp_nonce_field('what-who_which', 'securite_nonce');
         submit_button();
         ?>
-        </form>
-    </div>
+    </form>
+  </div>
     <?php
 }
 
-function
-change_footer($text){
-    if(get_option( 'mon_reglage_custom' )){
+function change_footer($text)
+{
+    if (get_option('mon_reglage_custom')) {
         $value = get_option('mon_reglage_custom');
-        return "Merci de faire de " . $value . ' votre organisateur d\'évenement !';
+
+        return "Merci de faire de ".$value.' votre organisateur d\'évenement !';
     } else {
         return $text;
     }
 }
 
-add_filter('admin_footer_text','change_footer');
+add_filter('admin_footer_text', 'change_footer');

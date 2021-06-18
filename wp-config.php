@@ -39,9 +39,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
 
 // for dev
-// define( 'WP_HOME', 'http://127.0.0.1/event-go-wordpress' );
+define( 'WP_HOME', 'http://52.169.70.157/wordpress' );
 
-// define( 'WP_SITEURL', 'http://127.0.0.1/event-go-wordpress' );
+define( 'WP_SITEURL', 'http://52.169.70.157/wordpress' );
 
 /**#@+
  * Authentication Unique Keys and Salts.
